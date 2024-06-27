@@ -13,6 +13,11 @@
     <select id="selectStudents" resultType="cn.edcenter.domain.student">
             select id,name,email,age from student order by id
     </select>
+
+<!--插入操作-->
+    <insert id = "insertStudent">
+        insert into student values(#{id},#{name},#{age},#{gender})
+    </insert>
 </mapper>
 <!--
     sql映射文件（sql mapper）：写sql语句的，mybatis会执行这些sql
